@@ -11,5 +11,13 @@
   "bugs": {
     "url": "https://github.com/5app/5app-coding-challenge/issues"
   },
-  "homepage": "https://github.com/5app/5app-coding-challenge#readme"
+  "homepage": "https://github.com/5app/5app-coding-challenge#readme",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  }
 }
