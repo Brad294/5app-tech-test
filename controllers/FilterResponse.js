@@ -13,14 +13,16 @@ function selectThumbnailUrl(payload) {
       logoSize = convertToNumber(logo.size);
       //Check to see if file size is between number range 16x6 and 64x64
       if (logoSize > 1616 && logoSize <= 6464) {
-        newArray = [logo];
-        payload[payloadIdex].logos = newArray;
+        newArray = [logo.url];
+        payload[payloadIdex].thumbnail = newArray;
+        delete payload[payloadIdex].logos ;
       } else {
         //if not in range dont sendback anything we did'nt ask for out of range.
-        payload[payloadIdex].logos = [];
+        payload[payloadIdex].thumbnail = [];
       }
     });
   });
+  console.log(payload)
   return payload;
 }
 
