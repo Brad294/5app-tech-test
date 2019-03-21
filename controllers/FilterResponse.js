@@ -27,7 +27,7 @@ function selectThumbnailUrl(payload) {
 }
 
 function convertToNumber(size) {
-  const result = size.replace("x", "");
+  const result = parseInt(size.replace("x", ""));
   return result;
 }
 
